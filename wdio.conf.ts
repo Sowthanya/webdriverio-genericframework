@@ -25,7 +25,7 @@ export const config: Options.Testrunner = {
         // for all available options
         tsNodeOpts: {
             transpileOnly: true,
-            project: 'test/tsconfig.json'
+            project: 'tsconfig.json'
         }
         // tsconfig-paths is only used if "tsConfigPathsOpts" are provided, if you
         // do please make sure "tsconfig-paths" is installed as dependency
@@ -50,7 +50,7 @@ export const config: Options.Testrunner = {
     // will be called from there.
     //
     specs: [
-        './features/**/*.feature'
+        './src/test/features/*.feature'
     ],
     // Patterns to exclude.
     exclude: [
@@ -168,7 +168,7 @@ export const config: Options.Testrunner = {
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
         // <string[]> (file/dir) require files before executing features
-        require: ['./features/step-definitions/steps.ts'],
+        require: ['./src/test/steps/steps.ts'],
         // <boolean> show full backtrace for errors
         backtrace: false,
         // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
