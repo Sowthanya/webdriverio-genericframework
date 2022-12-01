@@ -1,2 +1,2 @@
 # webdriverio-genericframework
-Test Automation Project using Webdriverio for UI,API and mobile test automation
+Test Automation Project using Webdriverio for UI,API and Mobile test automation

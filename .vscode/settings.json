@@ -1,0 +1,24 @@
+{
+    "cucumberautocomplete.steps": [
+        "./test/steps/*.ts"
+    ],
+    "cucumberautocomplete.strictGherkinCompletion": true,
+    "cucumberautocomplete.syncfeatures": "./test/features/*.feature",
+    "cucumberautocomplete.strictGherkinValidation": false,
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell",
+            "args": [
+                "-ExecutionPolicy",
+                "Bypass"
+            ]
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    }
+}

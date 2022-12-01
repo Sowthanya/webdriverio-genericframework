@@ -1,5 +1,9 @@
 import type { Options } from '@wdio/types'
 
+const drivers = {
+    chrome: { version: '107.0.5304.62' }
+}
+
 export const config: Options.Testrunner = {
     //
     // ====================
@@ -50,7 +54,7 @@ export const config: Options.Testrunner = {
     // will be called from there.
     //
     specs: [
-        './src/test/features/*.feature'
+        './test/features/*.feature'
     ],
     // Patterns to exclude.
     exclude: [
@@ -79,7 +83,7 @@ export const config: Options.Testrunner = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-    
+
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
@@ -123,7 +127,7 @@ export const config: Options.Testrunner = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://localhost',
+    baseUrl: '',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -139,8 +143,12 @@ export const config: Options.Testrunner = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['selenium-standalone'],
-    
+    services: [['selenium-standalone', {
+        installArgs: { drivers },
+        args: { drivers }
+
+    }]],
+
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
     // see also: https://webdriver.io/docs/frameworks
@@ -161,14 +169,14 @@ export const config: Options.Testrunner = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec',['allure', {outputDir: 'allure-results'}]],
+    reporters: ['spec'],
 
 
     //
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
         // <string[]> (file/dir) require files before executing features
-        require: ['./src/test/steps/steps.ts'],
+        require: ['./test/steps/login.steps.ts'],
         // <boolean> show full backtrace for errors
         backtrace: false,
         // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
@@ -190,7 +198,7 @@ export const config: Options.Testrunner = {
         // <boolean> Enable this config to treat undefined definitions as warnings.
         ignoreUndefinedDefinitions: false
     },
-    
+
     //
     // =====
     // Hooks
@@ -311,7 +319,7 @@ export const config: Options.Testrunner = {
      */
     // afterFeature: function (uri, feature) {
     // },
-    
+
     /**
      * Runs after a WebdriverIO command gets executed
      * @param {String} commandName hook command name
