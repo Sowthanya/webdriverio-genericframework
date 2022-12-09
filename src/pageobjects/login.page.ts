@@ -1,3 +1,4 @@
+import { waitForDisplayed } from "../utils/wait-utils";
 import BasePage from "./basepage.page";
 
 class LoginPage extends BasePage {
@@ -22,6 +23,7 @@ class LoginPage extends BasePage {
         await this.userNameInput.setValue(username);
         await this.userPasswordInput.setValue(password);
         await this.submitButton.click();
+        await waitForDisplayed(this.pageName);
     }
 
 } export const loginPage = new LoginPage();

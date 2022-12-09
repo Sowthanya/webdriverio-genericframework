@@ -1,5 +1,5 @@
 import type { Options } from '@wdio/types'
-
+import LauncherService from './src/services/launcher.service'
 const drivers = {
     chrome: { version: '107.0.5304.62' }
 }
@@ -104,6 +104,7 @@ export const config: Options.Testrunner = {
     //
     // Level of logging verbosity: trace | debug | info | warn | error | silent
     logLevel: 'info',
+    outputDir: './wdio-log',
     //
     // Set specific log levels per logger
     // loggers:
@@ -147,7 +148,7 @@ export const config: Options.Testrunner = {
         installArgs: { drivers },
         args: { drivers }
 
-    }]],
+    }], [LauncherService, {}]],
 
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber

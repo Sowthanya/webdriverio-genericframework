@@ -1,3 +1,4 @@
+import { addLog } from "./report-util";
 
 
 /**
@@ -10,7 +11,7 @@ export class Assertion {
             expect(actual).toEqual(expected);
         }
         catch (error) {
-
+            await addLog("Assertion Failure>> " + "Expected: " + expected + " doesn't equal to Actual: " + actual)
         }
     }
 

@@ -1,0 +1,199 @@
+2022-12-09T06:25:08.463Z INFO @wdio/local-runner: Run worker command: run
+2022-12-09T06:25:10.342Z INFO webdriver: Initiate new session using the WebDriver protocol
+2022-12-09T06:25:10.351Z INFO webdriver: [POST] http://localhost:4444/wd/hub/session
+2022-12-09T06:25:10.351Z INFO webdriver: DATA {
+  capabilities: {
+    alwaysMatch: { browserName: 'chrome', acceptInsecureCerts: true },
+    firstMatch: [ {} ]
+  },
+  desiredCapabilities: { browserName: 'chrome', acceptInsecureCerts: true }
+}
+2022-12-09T06:25:21.496Z INFO webdriver: COMMAND navigateTo("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
+2022-12-09T06:25:21.497Z INFO webdriver: [POST] http://localhost:4444/wd/hub/session/256bb50291244fab6c0456b464f4f5ea/url
+2022-12-09T06:25:21.497Z INFO webdriver: DATA {
+  url: 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'
+}
+2022-12-09T06:25:26.334Z INFO webdriver: COMMAND findElement("css selector", "input[name='username']")
+2022-12-09T06:25:26.334Z INFO webdriver: [POST] http://localhost:4444/wd/hub/session/256bb50291244fab6c0456b464f4f5ea/element
+2022-12-09T06:25:26.334Z INFO webdriver: DATA { using: 'css selector', value: "input[name='username']" }
+2022-12-09T06:25:26.372Z INFO webdriver: RESULT {
+  error: 'no such element',
+  message: `no such element: Unable to locate element: {"method":"css selector","selector":"input[name='username']"}\n` +
+    '  (Session info: chrome=108.0.5359.99)',
+  stacktrace: 'Backtrace:\n' +
+    '\tOrdinal0 [0x00BAACD3+2075859]\n' +
+    '\tOrdinal0 [0x00B3EE61+1633889]\n' +
+    '\tOrdinal0 [0x00A3B7BD+571325]\n' +
+    '\tOrdinal0 [0x00A6AC2F+764975]\n' +
+    '\tOrdinal0 [0x00A6AE1B+765467]\n' +
+    '\tOrdinal0 [0x00A9D0F2+970994]\n' +
+    '\tOrdinal0 [0x00A87364+881508]\n' +
+    '\tOrdinal0 [0x00A9B56A+963946]\n' +
+    '\tOrdinal0 [0x00A87136+880950]\n' +
+    '\tOrdinal0 [0x00A5FEFD+720637]\n' +
+    '\tOrdinal0 [0x00A60F3F+724799]\n' +
+    '\tGetHandleVerifier [0x00E5EED2+2769538]\n' +
+    '\tGetHandleVerifier [0x00E50D95+2711877]\n' +
+    '\tGetHandleVerifier [0x00C3A03A+521194]\n' +
+    '\tGetHandleVerifier [0x00C38DA0+516432]\n' +
+    '\tOrdinal0 [0x00B4682C+1665068]\n' +
+    '\tOrdinal0 [0x00B4B128+1683752]\n' +
+    '\tOrdinal0 [0x00B4B215+1683989]\n' +
+    '\tOrdinal0 [0x00B56484+1729668]\n' +
+    '\tBaseThreadInitThunk [0x752EFEF9+25]\n' +
+    '\tRtlGetAppContainerNamedObjectPath [0x773F7BBE+286]\n' +
+    '\tRtlGetAppContainerNamedObjectPath [0x773F7B8E+238]\n'
+}
+2022-12-09T06:25:26.382Z INFO webdriver: COMMAND findElements("css selector", "input[name='username']")
+2022-12-09T06:25:26.382Z INFO webdriver: [POST] http://localhost:4444/wd/hub/session/256bb50291244fab6c0456b464f4f5ea/elements
+2022-12-09T06:25:26.382Z INFO webdriver: DATA { using: 'css selector', value: "input[name='username']" }
+2022-12-09T06:25:26.411Z INFO webdriver: RESULT []
+2022-12-09T06:25:26.885Z INFO webdriver: COMMAND findElements("css selector", "input[name='username']")
+2022-12-09T06:25:26.885Z INFO webdriver: [POST] http://localhost:4444/wd/hub/session/256bb50291244fab6c0456b464f4f5ea/elements
+2022-12-09T06:25:26.885Z INFO webdriver: DATA { using: 'css selector', value: "input[name='username']" }
+2022-12-09T06:25:26.954Z INFO webdriver: RESULT [
+  {
+    'element-6066-11e4-a52e-4f735466cecf': 'd6f7090a-a8b7-4c6b-9f97-58a4ddf58a03'
+  }
+]
+2022-12-09T06:25:26.960Z INFO webdriver: COMMAND findElement("css selector", "input[name='username']")
+2022-12-09T06:25:26.960Z INFO webdriver: [POST] http://localhost:4444/wd/hub/session/256bb50291244fab6c0456b464f4f5ea/element
+2022-12-09T06:25:26.960Z INFO webdriver: DATA { using: 'css selector', value: "input[name='username']" }
+2022-12-09T06:25:27.009Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': 'd6f7090a-a8b7-4c6b-9f97-58a4ddf58a03'
+}
+2022-12-09T06:25:27.014Z INFO webdriver: COMMAND elementClear("d6f7090a-a8b7-4c6b-9f97-58a4ddf58a03")
+2022-12-09T06:25:27.014Z INFO webdriver: [POST] http://localhost:4444/wd/hub/session/256bb50291244fab6c0456b464f4f5ea/element/d6f7090a-a8b7-4c6b-9f97-58a4ddf58a03/clear
+2022-12-09T06:25:27.123Z INFO webdriver: COMMAND elementSendKeys("d6f7090a-a8b7-4c6b-9f97-58a4ddf58a03", "Admin")
+2022-12-09T06:25:27.124Z INFO webdriver: [POST] http://localhost:4444/wd/hub/session/256bb50291244fab6c0456b464f4f5ea/element/d6f7090a-a8b7-4c6b-9f97-58a4ddf58a03/value
+2022-12-09T06:25:27.124Z INFO webdriver: DATA { text: 'Admin' }
+2022-12-09T06:25:27.274Z INFO webdriver: COMMAND findElement("css selector", "input[name='password']")
+2022-12-09T06:25:27.274Z INFO webdriver: [POST] http://localhost:4444/wd/hub/session/256bb50291244fab6c0456b464f4f5ea/element
+2022-12-09T06:25:27.274Z INFO webdriver: DATA { using: 'css selector', value: "input[name='password']" }
+2022-12-09T06:25:27.358Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '994aee80-4ad7-4ce9-a3a4-3f8aaae20842'
+}
+2022-12-09T06:25:27.363Z INFO webdriver: COMMAND elementClear("994aee80-4ad7-4ce9-a3a4-3f8aaae20842")
+2022-12-09T06:25:27.365Z INFO webdriver: [POST] http://localhost:4444/wd/hub/session/256bb50291244fab6c0456b464f4f5ea/element/994aee80-4ad7-4ce9-a3a4-3f8aaae20842/clear
+2022-12-09T06:25:27.505Z INFO webdriver: COMMAND elementSendKeys("994aee80-4ad7-4ce9-a3a4-3f8aaae20842", "<Screenshot[base64]>")
+2022-12-09T06:25:27.505Z INFO webdriver: [POST] http://localhost:4444/wd/hub/session/256bb50291244fab6c0456b464f4f5ea/element/994aee80-4ad7-4ce9-a3a4-3f8aaae20842/value
+2022-12-09T06:25:27.505Z INFO webdriver: DATA { text: 'admin123' }
+2022-12-09T06:25:27.634Z INFO webdriver: COMMAND findElement("xpath", "//button[contains(@class,'orangehrm-login-button')]")
+2022-12-09T06:25:27.634Z INFO webdriver: [POST] http://localhost:4444/wd/hub/session/256bb50291244fab6c0456b464f4f5ea/element
+2022-12-09T06:25:27.634Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: "//button[contains(@class,'orangehrm-login-button')]"
+}
+2022-12-09T06:25:27.666Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '2be8523e-6be9-4527-b5e9-5a07dbb91306'
+}
+2022-12-09T06:25:27.669Z INFO webdriver: COMMAND elementClick("2be8523e-6be9-4527-b5e9-5a07dbb91306")
+2022-12-09T06:25:27.669Z INFO webdriver: [POST] http://localhost:4444/wd/hub/session/256bb50291244fab6c0456b464f4f5ea/element/2be8523e-6be9-4527-b5e9-5a07dbb91306/click
+2022-12-09T06:25:27.752Z INFO webdriver: COMMAND findElement("xpath", "//header[@class='oxd-topbar']//h6")
+2022-12-09T06:25:27.752Z INFO webdriver: [POST] http://localhost:4444/wd/hub/session/256bb50291244fab6c0456b464f4f5ea/element
+2022-12-09T06:25:27.752Z INFO webdriver: DATA { using: 'xpath', value: "//header[@class='oxd-topbar']//h6" }
+2022-12-09T06:25:29.000Z INFO webdriver: RESULT {
+  error: 'no such element',
+  message: `no such element: Unable to locate element: {"method":"xpath","selector":"//header[@class='oxd-topbar']//h6"}\n` +
+    '  (Session info: chrome=108.0.5359.99)',
+  stacktrace: 'Backtrace:\n' +
+    '\tOrdinal0 [0x00BAACD3+2075859]\n' +
+    '\tOrdinal0 [0x00B3EE61+1633889]\n' +
+    '\tOrdinal0 [0x00A3B7BD+571325]\n' +
+    '\tOrdinal0 [0x00A6AC2F+764975]\n' +
+    '\tOrdinal0 [0x00A6AE1B+765467]\n' +
+    '\tOrdinal0 [0x00A9D0F2+970994]\n' +
+    '\tOrdinal0 [0x00A87364+881508]\n' +
+    '\tOrdinal0 [0x00A9B56A+963946]\n' +
+    '\tOrdinal0 [0x00A87136+880950]\n' +
+    '\tOrdinal0 [0x00A5FEFD+720637]\n' +
+    '\tOrdinal0 [0x00A60F3F+724799]\n' +
+    '\tGetHandleVerifier [0x00E5EED2+2769538]\n' +
+    '\tGetHandleVerifier [0x00E50D95+2711877]\n' +
+    '\tGetHandleVerifier [0x00C3A03A+521194]\n' +
+    '\tGetHandleVerifier [0x00C38DA0+516432]\n' +
+    '\tOrdinal0 [0x00B4682C+1665068]\n' +
+    '\tOrdinal0 [0x00B4B128+1683752]\n' +
+    '\tOrdinal0 [0x00B4B215+1683989]\n' +
+    '\tOrdinal0 [0x00B56484+1729668]\n' +
+    '\tBaseThreadInitThunk [0x752EFEF9+25]\n' +
+    '\tRtlGetAppContainerNamedObjectPath [0x773F7BBE+286]\n' +
+    '\tRtlGetAppContainerNamedObjectPath [0x773F7B8E+238]\n'
+}
+2022-12-09T06:25:29.003Z INFO webdriver: COMMAND findElement("xpath", "//header[@class='oxd-topbar']//h6")
+2022-12-09T06:25:29.003Z INFO webdriver: [POST] http://localhost:4444/wd/hub/session/256bb50291244fab6c0456b464f4f5ea/element
+2022-12-09T06:25:29.003Z INFO webdriver: DATA { using: 'xpath', value: "//header[@class='oxd-topbar']//h6" }
+2022-12-09T06:25:29.032Z INFO webdriver: RESULT {
+  error: 'no such element',
+  message: `no such element: Unable to locate element: {"method":"xpath","selector":"//header[@class='oxd-topbar']//h6"}\n` +
+    '  (Session info: chrome=108.0.5359.99)',
+  stacktrace: 'Backtrace:\n' +
+    '\tOrdinal0 [0x00BAACD3+2075859]\n' +
+    '\tOrdinal0 [0x00B3EE61+1633889]\n' +
+    '\tOrdinal0 [0x00A3B7BD+571325]\n' +
+    '\tOrdinal0 [0x00A6AC2F+764975]\n' +
+    '\tOrdinal0 [0x00A6AE1B+765467]\n' +
+    '\tOrdinal0 [0x00A9D0F2+970994]\n' +
+    '\tOrdinal0 [0x00A87364+881508]\n' +
+    '\tOrdinal0 [0x00A9B56A+963946]\n' +
+    '\tOrdinal0 [0x00A87136+880950]\n' +
+    '\tOrdinal0 [0x00A5FEFD+720637]\n' +
+    '\tOrdinal0 [0x00A60F3F+724799]\n' +
+    '\tGetHandleVerifier [0x00E5EED2+2769538]\n' +
+    '\tGetHandleVerifier [0x00E50D95+2711877]\n' +
+    '\tGetHandleVerifier [0x00C3A03A+521194]\n' +
+    '\tGetHandleVerifier [0x00C38DA0+516432]\n' +
+    '\tOrdinal0 [0x00B4682C+1665068]\n' +
+    '\tOrdinal0 [0x00B4B128+1683752]\n' +
+    '\tOrdinal0 [0x00B4B215+1683989]\n' +
+    '\tOrdinal0 [0x00B56484+1729668]\n' +
+    '\tBaseThreadInitThunk [0x752EFEF9+25]\n' +
+    '\tRtlGetAppContainerNamedObjectPath [0x773F7BBE+286]\n' +
+    '\tRtlGetAppContainerNamedObjectPath [0x773F7B8E+238]\n'
+}
+2022-12-09T06:25:29.506Z INFO webdriver: COMMAND findElement("xpath", "//header[@class='oxd-topbar']//h6")
+2022-12-09T06:25:29.506Z INFO webdriver: [POST] http://localhost:4444/wd/hub/session/256bb50291244fab6c0456b464f4f5ea/element
+2022-12-09T06:25:29.506Z INFO webdriver: DATA { using: 'xpath', value: "//header[@class='oxd-topbar']//h6" }
+2022-12-09T06:25:29.538Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': 'd8bab0f3-80bf-4d25-b43b-1260f1e13772'
+}
+2022-12-09T06:25:29.543Z INFO webdriver: COMMAND executeScript(<fn>, <object>)
+2022-12-09T06:25:29.544Z INFO webdriver: [POST] http://localhost:4444/wd/hub/session/256bb50291244fab6c0456b464f4f5ea/execute/sync
+2022-12-09T06:25:29.544Z INFO webdriver: DATA {
+  script: 'isElementDisplayed(...) [7963 bytes]',
+  args: [
+    {
+      'element-6066-11e4-a52e-4f735466cecf': 'd8bab0f3-80bf-4d25-b43b-1260f1e13772',
+      ELEMENT: 'd8bab0f3-80bf-4d25-b43b-1260f1e13772'
+    }
+  ]
+}
+2022-12-09T06:25:29.585Z INFO webdriver: RESULT true
+2022-12-09T06:25:29.589Z INFO webdriver: COMMAND findElement("xpath", "//header[@class='oxd-topbar']//h6")
+2022-12-09T06:25:29.590Z INFO webdriver: [POST] http://localhost:4444/wd/hub/session/256bb50291244fab6c0456b464f4f5ea/element
+2022-12-09T06:25:29.590Z INFO webdriver: DATA { using: 'xpath', value: "//header[@class='oxd-topbar']//h6" }
+2022-12-09T06:25:29.630Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': 'd8bab0f3-80bf-4d25-b43b-1260f1e13772'
+}
+2022-12-09T06:25:29.634Z INFO webdriver: COMMAND getElementText("d8bab0f3-80bf-4d25-b43b-1260f1e13772")
+2022-12-09T06:25:29.634Z INFO webdriver: [GET] http://localhost:4444/wd/hub/session/256bb50291244fab6c0456b464f4f5ea/element/d8bab0f3-80bf-4d25-b43b-1260f1e13772/text
+2022-12-09T06:25:29.908Z INFO webdriver: RESULT Dashboard
+2022-12-09T06:25:29.922Z INFO webdriver: COMMAND getLogTypes()
+2022-12-09T06:25:29.922Z INFO webdriver: [GET] http://localhost:4444/wd/hub/session/256bb50291244fab6c0456b464f4f5ea/se/log/types
+2022-12-09T06:25:29.962Z INFO webdriver: RESULT [ 'browser', 'driver' ]
+2022-12-09T06:25:29.963Z INFO webdriver: COMMAND getLogs("driver")
+2022-12-09T06:25:29.963Z INFO webdriver: [POST] http://localhost:4444/wd/hub/session/256bb50291244fab6c0456b464f4f5ea/se/log
+2022-12-09T06:25:29.963Z INFO webdriver: DATA { type: 'driver' }
+2022-12-09T06:25:29.964Z INFO webdriver: COMMAND getLogs("browser")
+2022-12-09T06:25:29.964Z INFO webdriver: [POST] http://localhost:4444/wd/hub/session/256bb50291244fab6c0456b464f4f5ea/se/log
+2022-12-09T06:25:29.965Z INFO webdriver: DATA { type: 'browser' }
+2022-12-09T06:25:30.060Z INFO webdriver: RESULT [
+  {
+    level: 'WARNING',
+    message: 'This version of ChromeDriver has not been tested with Chrome version 108.\n',
+    timestamp: 1670567120677
+  }
+]
+2022-12-09T06:25:30.122Z INFO webdriver: RESULT []
+2022-12-09T06:25:30.123Z INFO webdriver: COMMAND deleteSession()
+2022-12-09T06:25:30.123Z INFO webdriver: [DELETE] http://localhost:4444/wd/hub/session/256bb50291244fab6c0456b464f4f5ea
